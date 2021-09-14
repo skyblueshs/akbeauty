@@ -1,0 +1,840 @@
+@charset "utf-8";
+#wrap {
+  min-width: 320px;
+}
+.inner {
+  margin:0 auto;
+  position: relative;
+}
+/* 모바일 */
+header {
+  height:45px;
+  border-bottom:1px solid #949494;
+  padding-top:13px;
+}
+h1 {
+  width:140px;
+  height:19px;
+  font-size:0;
+  color:transparent;
+  background-image:url(../img/logo_main_2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 140px auto;
+  margin:0 auto;
+}
+header .search {
+  display:none;
+}
+header .utill {
+  position:absolute;
+  top:-2px;
+  right:0;
+}
+header .utill li {
+  float:left;
+  margin-right:10px;
+}
+header .utill li.login {
+  display: none;
+}
+header .utill li a {
+  width:25px;
+  height:25px;
+  color:transparent;
+  font-size:0;
+  display: block;
+  /* background-repeat: no-repeat;
+  background-position: top;
+  background-size:40px 40px; */
+}
+/* header .utill li a.login {
+  background-image: url(../img/icon/ico-mybox-login.png);
+}
+header .utill li a.mypage {
+  background-image: url(../img/icon/ico-mybox-human.png);
+}
+header .utill li a.cart {
+  background-image: url(../img/icon/ico-mybox-bag.png);
+} */
+header .menu {
+  width:45px;
+  height:45px;
+  position:absolute;
+  padding: calc((45px - 15px) / 2) 15px ;
+  top:-13px;
+  left:0;
+  display: block;
+}
+header .menu::before, header .menu::after {
+  content:'';
+  display: block;
+  width:30px;
+  height:3px;
+  background-color:#333;
+}
+header .menu span {
+  display: block;
+  width:30px;
+  height:3px;
+  background-color:#333;
+  color:transparent;
+  font-size:0;
+  margin:3px 0;
+}
+/* 헤더 끝, 네비게이션 시작 */
+nav {
+  border-bottom:1px solid #949494;
+}
+nav .gnb {
+  text-align:center;
+}
+nav .gnb li {
+  display: inline-block;
+  margin-right:35px;
+}
+nav .gnb li:last-child {
+  margin-right:0;
+}
+nav .gnb li a {
+  height:25px;
+  display: block;
+  font-size:10px;
+  line-height:25px;
+}
+nav .whistle {
+  display: none;
+}
+/* 네비게이션 영역 끝, 슬라이드 시작 */
+#slide {
+  position:relative;
+}
+#slide > a {
+  display: block;
+  height:350px;
+  width:100%;
+  color:transparent;
+  font-size:0;
+  background: url(../img/main/slide01.jpg) no-repeat center / cover;
+}
+#slide .s_button {
+  position:absolute;
+  bottom:25px;
+  /* left:50%;
+  transform: translateX(-50%); */
+  right:20px;
+  width:65px;
+  height:20px;
+  background-color:rgba(0,0,0,0.5);
+  border-radius: 20px;
+}
+#slide .s_button p {
+  color:#fff;
+  text-align:center;
+  line-height:20px;
+  font-size:10px
+}
+#slide .s_button p strong {
+  font-size:12px;
+}
+#slide .s_button a {
+  display: none;
+}
+/* 슬라이드 영역 끝 브랜드관 시작 */
+#brandshop {
+  display: none;
+}
+/* 브랜드관 끝 스페셜관 시작 */
+.p_special {
+  padding:50px 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fde5c3+0,fcc5c8+50,fde5c3+100 */
+  background: #fde5c3; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fde5c3 0%, #fcc5c8 50%, #fde5c3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #fde5c3 0%,#fcc5c8 50%,#fde5c3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #fde5c3 0%,#fcc5c8 50%,#fde5c3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fde5c3', endColorstr='#fde5c3',GradientType=0 ); /* IE6-9 */
+}
+h2 {
+  font-size:21px;
+  text-align:center;
+  margin-bottom:20px;
+  line-height:1;
+}
+.p_special .sp_product li {
+  width:calc((100% - 16px) / 2);
+  float:left;
+  margin-right:16px;
+  padding:10px;
+}
+.p_special .sp_product li:nth-child(2n){
+  margin-right:0;
+}
+.p_special .sp_product li .sp_txt {
+  margin-top:10px;
+  text-shadow: 3px 3px 4px rgba(255,255,255,0.8);
+}
+.p_special .sp_product li .sp_brand {
+  font-size:10px;
+}
+.p_special .sp_product li h3 {
+  font-size:14px;
+  display:-webkit-box;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.best {
+  padding:50px 0;
+}
+.best .tabmenu .bestseller {
+  display:none;
+}
+/* 스페셜관 끝 베스트관 시작 */
+.best .tabmenu .bestreview .br_board ul li {
+  margin-bottom:20px;
+}
+.best .tabmenu .bestreview .br_board ul li:last-child {
+  margin-bottom:0;
+}
+.best .tabmenu .bestreview .br_board .br_img {
+  margin-right:20px;
+  width:calc((100% - 20px) / 3);
+  float:left;
+}
+.best .tabmenu .bestreview .br_board .br_txt {
+  width:calc((100% - 20px) / 3 * 2);
+  float:left;
+}
+.best .tabmenu .bestreview .br_board .br_txt p.star_id {
+  margin-top:5px;
+}
+.best .tabmenu .bestreview .br_board .br_txt p.star_id span {
+  margin-left:70px;
+}
+.best .tabmenu .bestreview .br_board .br_txt p.br_brand {
+  font-size:14px;
+  margin-top:10px;
+}
+.best .tabmenu .bestreview .br_board .br_txt h5 {
+  margin-top:10px;
+}
+.best .tabmenu .bestreview .br_board .br_txt p.review {
+  display:-webkit-box;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  margin-top:20px;
+  line-height:1.8;
+}
+/* 베스트관 끝 뉴프로덕트 시작 */
+.newproduct {
+  background-color:#e1e5f0;
+  padding:25px 0;
+}
+.newproduct h2 {
+  margin-bottom:25px;
+}
+.newproduct .np_img a {
+  position:relative;
+  display:block;
+}
+.newproduct .np_img p {
+  width:80px;
+  height:80px;
+  background: url(../img/icon/ico-video-play.png) no-repeat top;
+  color:transparent;
+  font-size:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.newproduct .np_txt {
+  text-align:center;
+  padding:30px 0;
+}
+.newproduct .np_txt .np_brand{
+  margin-bottom:8px;
+}
+.newproduct .np_txt h6{
+  font-size:18px;
+  margin-bottom:5px;
+}
+.newproduct .np_txt .npsubtit{
+  font-size:14px;
+  margin-bottom:12px;
+}
+.newproduct .np_txt .more {
+  margin:0 auto;
+  display: block;
+  font-weight:bold;
+  width:130px;
+  height:32px;
+  border:1px solid #000;
+  line-height:30px;
+  border-radius:16px;
+  text-align:left;
+  padding-left:20px;
+  background:url(../img/ico-morebtn-arrow.png) no-repeat 110px 10px
+}
+.newproduct .np_slideBtn {
+  position:absolute;
+  bottom:5px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.newproduct .np_slideBtn li {
+  margin-right:5px;
+  float:left;
+}
+.newproduct .np_slideBtn li:last-child{
+  margin-right:0;
+}
+.newproduct .np_slideBtn li a {
+  display: block;
+  width:10px;
+  height:10px;
+  border-radius: 5px;
+  background-color:#f5d5db;
+  font-size:0;
+  color:transparent;
+}
+.newproduct .np_slideBtn li.on a {
+  background-color:#89cbaf;
+}
+/* 신제품 끝 모바일 고객서비스 시작 */
+.m_link {
+  background-color:#333;
+  padding-top:40px;
+}
+.m_link ul li {
+  float:left;
+  width:50%;
+}
+.m_link ul li:first-child {
+  border-right: 1px solid #333;
+}
+.m_link ul li a {
+  display:block;
+  background-color:#fff;
+  color:#333;
+  text-align:center;
+  height:50px;
+  line-height:50px;
+}
+
+
+
+/* 테블릿 */
+@media all and (min-width:860px) {
+  header {
+    height:90px;
+    padding-top:26px;
+  }
+  .inner {
+    /* padding:0 20px; */
+    width:860px;
+  }
+  h1 {
+    margin:0;
+    width:210px;
+    height:38px;
+    background-size: 210px auto;
+  }
+  header .search {
+    display:block;
+    width:40%;
+    max-width:400px;
+    border-bottom:2px solid #000;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    padding:0 10px;
+  }
+  header .search input  {
+    font-size:18px;
+    width:calc(100% - 34px);
+    height:34px;
+    line-height:34px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    letter-spacing: -0.6px;
+  }
+  header .search button {
+    color:transparent;
+    font-size:0;
+    background:url(../img/icon/ico-header-search.png) no-repeat center / 24px;
+    width:24px;
+    height:24px;
+    position: absolute;
+    bottom:5px;
+    right:10px;
+  }
+  header .utill li.login {
+    display: block;
+  }
+  header .menu {
+    display: none;
+  }
+  header .utill li a {
+    width:40px;
+    height:40px;
+  }
+  /* 테블릿 헤더 끝, 네비게이션 시작 */
+  nav .gnb {
+    text-align:left;
+  }
+  nav .gnb li {
+    display: inline-block;
+    margin-right:70px;
+  }
+  nav .gnb li:last-child {
+    margin-right:0;
+  }
+  nav .gnb li a {
+    height:50px;
+    display: block;
+    font-size:20px;
+    line-height:50px;
+  }
+  nav .whistle {
+    display: block;
+    font-size:0;
+    color:transparent;
+    width:62px;
+    height:18px;
+    background:url(../img/menu-whistle.png) no-repeat top / 100%;
+    position:absolute;
+    top:16px;
+    right:20px;
+  }
+    /* 테블릿 네비게이션 끝, 슬라이드 시작 */
+  #slide > a {
+    height:650px
+  }
+  #slide .s_button {
+    right:auto;
+    left:50%;
+    transform: translateX(-50%);
+    width:130px;
+    height:40px;
+    border-radius: 20px;
+  }
+  #slide .s_button p {
+    font-size:16px;
+  }
+  #slide .s_button p strong {
+    line-height:40px;
+    font-size:24px;
+  }
+  /* 테블릿 네비게이션 끝, 브랜드관 시작 */
+  #brandshop .inner {
+    padding:0;
+  }
+  #brandshop {
+    display: block;
+    padding:100px 0;
+    background: url(../img/main/img-brand-banner-bg.jpg) no-repeat top / 100% 280px;
+  }
+  #brandshop .b_age20 {
+    width: 240px;
+    float:left;
+  }
+  #brandshop .b_age20 a {
+    display: block;
+    font-weight:bold;
+    border:1px solid #666;
+    width:200px;
+    height:32px;
+    border-radius: 15px;
+    line-height:30px;
+    margin:30px 0 0 13px;
+    padding-left:15px;
+    background:url(../img/ico-morebtn-arrow.png) no-repeat 175px 10px;
+  }
+  #brandshop .b_age20 a:hover {
+    background-color:#333;
+    color:#fff;
+  }
+  #brandshop .b_product {
+    /* position:absolute;
+    top:0;
+    right:0; */
+    float:right;
+    width:calc(100% - 340px)
+  }
+  #brandshop .b_product ul li {
+    float:left;
+    margin-right:50px;
+    width:calc((100% - 50px) / 2)
+  }
+  #brandshop .b_product ul li:nth-child(2) {
+    margin-right:0;
+  }
+  #brandshop .b_product ul li:nth-child(3) {
+    display:none;
+  }
+  #brandshop .b_product ul li a h3 {
+    height:50px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    margin:25px 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  #brandshop .b_product ul li a h3 span {
+    display: block;
+    font-size:14px;
+    font-weight:normal;
+  }
+  /* 테블릿 브랜드관 끝 스페셜관 시작 */
+  .p_special {
+    padding:100px 0;
+  }
+  .p_special .sp_product li {
+    padding:20px;
+  }
+  .p_special .sp_product li .sp_brand {
+    font-size:14px;
+  }
+  .p_special .sp_product li h3 {
+    font-size:18px;
+    height:50px;
+  }
+  h2 {
+    font-size:42px;
+    text-align:left;
+    margin-bottom:50px;
+    /* border-bottom:2px solid #333; */
+    text-decoration:underline;
+  }
+  /* 테블릿 스페셜관 끝 베스트 관 시작 */
+  .best {
+    padding:100px 0;
+  }
+
+  .best .tabmenu .bestseller {
+    display:block;
+  }
+  .best .tabmenu .bestreview {
+    display: none;
+  }
+  .best .tabmenu li.bestseller .bs_board ul li {
+    width:calc((100% - 20px) / 2);
+    margin-right:20px;
+    float:left;
+  }
+  .best .tabmenu li.bestseller .bs_board ul li:nth-child(2n) {
+    margin-right:0;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_img {
+    position:relative;
+    margin-bottom:20px;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_img p {
+    width:40px;
+    height:40px;
+    background:url(../img/icon/bs_label.png) no-repeat top / 40px 40px;
+    position:absolute;
+    top:-10px;
+    left:0;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt {
+    margin-bottom:45px;
+    padding:0 20px;
+  }
+  .best .tabmenu li.bestseller .bs_board li:nth-child(3) .bs_txt {
+    margin-bottom:0;
+  }
+  .best .tabmenu li.bestseller .bs_board li:nth-child(4) .bs_txt {
+    margin-bottom:0;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt h4 {
+    font-size:20px;
+    margin-bottom:7px;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt h4 span {
+    font-size:48px;
+    vertical-align: middle;
+    font-weight:normal;
+    line-height:0.8;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt .bs_brand {
+    margin-bottom:5px;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt .title {
+    font-size:18px;
+    margin-bottom:5px;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt .price {
+    font-size:18px;
+    font-weight:bold;
+    color:#000;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt .price strong {
+    color:#f5121e;
+    margin-right:15px;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt .price span {
+    font-size:14px;
+    font-weight:normal;
+    color:#666;
+    margin-left:15px;
+    text-decoration:line-through;
+  }
+  /* 테블릿 베스트관 끝 뉴프로덕트 시작 */
+  .newproduct {
+    padding:100px 0;
+  }
+  .newproduct h2 {
+    margin-bottom:50px;
+  }
+  .newproduct .np_txt {
+    padding:30px 0;
+    background-color:#fff;
+  }
+  .newproduct .np_slideBtn {
+    bottom:auto;
+    left:auto;
+    transform: translateX(0);
+    top:15px;
+    right:20px;
+  }
+
+  .newproduct .np_slideBtn li {
+    margin-right:20px;
+  }
+
+  .newproduct .np_slideBtn li a {
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    background-color:#f5d5db;
+    font-size:0;
+    color:transparent;
+  }
+  .newproduct .np_slideBtn li.on a {
+    background-color:#89cbaf;
+  }
+  /* 테블릿 신제품 끝 고객서비스 시작 */
+  .m_link {
+    display:none;
+  }
+  .service {
+    background-color:#e1e5f0;
+  }
+  .service .inner {
+    padding:30px 40px;
+    background-color:#fff;
+  }
+  .service .s_tit {
+    font-size:24px;
+    font-weight:bold;
+  }
+  .service .cs {
+    width:40%;
+    float:left;
+    padding-right:40px;
+  }
+  .service .cs p.tel {
+    font-size:30px;
+    font-weight:bold;
+  }
+  .service .cs .cs_time {
+    font-size:14px;
+    line-height:1.8;
+    margin:17px 0 20px;
+  }
+  .service .cs .cs_time span {
+    font-size:12px;
+    padding:0 4px;
+    vertical-align: top;
+  }
+  .service .cs ul li {
+    float:left;
+  }
+  .service .cs ul li.faq {
+    margin-right:20px;
+  }
+  .service .cs ul li a {
+    display:block;
+    padding: 3px 30px;
+    border:1px solid #666;
+    border-radius:16px;
+  }
+  .service .cs ul li:hover a {
+    background-color:#ddd;
+  }
+  .service .notice {
+    width:60%;
+    float:left;
+    padding-left:40px;
+    border-left:1px dashed #ddd;
+  }
+  .service .notice .s_tit {
+    margin-bottom:13px;
+  }
+  .service .notice ul li:hover p {
+    text-decoration:underline;
+  }
+  .service .notice ul li a {
+    display:block;
+    font-size:14px;
+    line-height:2.2;
+  }
+  .service .notice ul li a span {
+    float:right;
+  }
+  .service .aklover {
+    display:none;
+  }
+}
+
+/* 데스크탑 */
+@media all and (min-width:1200px) {
+  .inner {
+    width:1200px;
+    padding:0;
+  }
+  header .search {
+    width:400px;
+  }
+  #slide .s_button {
+    width:275px;
+    height:60px;
+    border-radius: 30px;
+    /* padding:14px 18px; */
+  }
+  #slide .s_button p {
+    margin-right:22px;
+  }
+  #slide .s_button p strong {
+    line-height:60px;
+    font-size:24px;
+  }
+  #slide .s_button a {
+    color:transparent;
+    font-size:0;
+  }
+  #slide .s_button a, #slide .s_button p {
+    display: block;
+    float:left;
+  }
+  #slide .s_button a {
+    height:33px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:13.5px;
+    
+  }
+  #slide .s_button a.left_arrow {
+    width:34px;
+    background-image:url(../img/icon/visual_btn_left.png);
+    margin-right:22px;
+    margin-left:18px;
+  }
+  #slide .s_button a.play_button {
+    width:33px;
+    background-image:url(../img/icon/visual_btn_stop.png);
+    margin-right:22px;
+  }
+  #slide .s_button a.right_arrow {
+    width:34px;
+    background-image:url(../img/icon/visual_btn_right.png);
+    margin-right:18px;
+  }
+  /* 데스크탑 슬라이드 끝, 브랜드샵 시작 */
+  #brandshop .b_product ul li {
+    float:left;
+    margin-right:40px;
+    width:calc((100% - 100px) / 3)
+  }
+  #brandshop .b_product ul li:nth-child(2) {
+    margin-right:40px;
+  }
+  #brandshop .b_product ul li:nth-child(3) {
+    display:block;
+    margin-right:0;
+  }
+
+/* 데스크탑 브랜드샵 끝 스페셜관 시작 */
+  .p_special .sp_product li {
+    width:calc((100% - 60px) / 4);
+    margin-right:20px;
+  }
+  .p_special .sp_product li:nth-child(2n){
+    margin-right:20px;
+  }
+  .p_special .sp_product li:nth-child(4){
+    margin-right:0px;
+  }
+/* 데스크탑 스페셜관 끝 베스트관 시작 */
+  .best .tabmenu li.bestseller .bs_board .bs_img {
+    width:300px;
+    float:left;
+  }
+  .best .tabmenu li.bestseller .bs_board .bs_txt {
+    margin-bottom:0;
+    float:left;
+    padding:0 20px;
+    width:calc(100% - 300px);
+    letter-spacing: -0.6;
+  }
+  .best .tabmenu li.bestseller .bs_board li:nth-child(3) .bs_img, .best .tabmenu li.bestseller .bs_board  li:nth-child(4) .bs_img {
+    margin-bottom:0;
+  }
+  /* 데스크탑 베스트관 끝 뉴프로덕트 시작 */
+  .newproduct .np_img {
+    width:60%;
+    float:left;
+  }
+  .newproduct .np_txt {
+    width:40%;
+    height:450px;
+    float:left;
+    padding:145px 0;
+  }
+  /* 데스크탑 뉴프로덕트 끝 서비스 시작 */
+  .service .cs {
+    width:30%;
+  }
+  .service .notice {
+    width:50%;
+    padding-right:40px;
+    border-right:1px dashed #ddd;
+  }
+  .service .aklover {
+    display:block;
+    float:left;
+    padding-top:15px;
+    padding-left:35px;
+  }
+
+  .service .aklover a {
+    display:block;
+  }
+  .service .aklover a img {
+    height:120px;
+    width:auto;
+    margin-left:8px;
+  }
+  .service .aklover a p {
+    text-align:center;
+    padding: 3px 25px;
+    border:1px solid #666;
+    border-radius:16px;
+    margin-top:28px;
+  }
+}
