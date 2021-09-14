@@ -184,42 +184,45 @@ h2 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+/* 스페셜관 끝 베스트관 시작 */
 .best {
   padding:50px 0;
 }
-.best .tabmenu .bestseller {
+.best .tabmenu h2 {
+  margin-bottom:50px;
+}
+.best .tabmenu h2.bs_tit, .best .tabmenu ul.bs_board  {
   display:none;
 }
-/* 스페셜관 끝 베스트관 시작 */
-.best .tabmenu .bestreview .br_board ul li {
+.best .tabmenu .br_board li {
   margin-bottom:20px;
 }
-.best .tabmenu .bestreview .br_board ul li:last-child {
+.best .tabmenu .br_board li:last-child {
   margin-bottom:0;
 }
-.best .tabmenu .bestreview .br_board .br_img {
+.best .tabmenu .br_board .br_img {
   margin-right:20px;
   width:calc((100% - 20px) / 3);
   float:left;
 }
-.best .tabmenu .bestreview .br_board .br_txt {
+.best .tabmenu .br_board .br_txt {
   width:calc((100% - 20px) / 3 * 2);
   float:left;
 }
-.best .tabmenu .bestreview .br_board .br_txt p.star_id {
+.best .tabmenu .br_board .br_txt p.star_id {
   margin-top:5px;
 }
-.best .tabmenu .bestreview .br_board .br_txt p.star_id span {
+.best .tabmenu .br_board .br_txt p.star_id span {
   margin-left:70px;
 }
-.best .tabmenu .bestreview .br_board .br_txt p.br_brand {
+.best .tabmenu .br_board .br_txt p.br_brand {
   font-size:14px;
   margin-top:10px;
 }
-.best .tabmenu .bestreview .br_board .br_txt h5 {
+.best .tabmenu .br_board .br_txt h5 {
   margin-top:10px;
 }
-.best .tabmenu .bestreview .br_board .br_txt p.review {
+.best .tabmenu .br_board .br_txt p.review {
   display:-webkit-box;
   overflow:hidden;
   text-overflow:ellipsis;
@@ -325,8 +328,65 @@ h2 {
   height:50px;
   line-height:50px;
 }
+.service {
+  display: none;
+}
+/* 서비스 끝 푸터 시작 */
+footer {
+  background-color: #333;
+  padding:50px 0;
+  color:#fff;
+  text-align: center;
+}
+footer .f_logo {
+  font-size:0;
+  color:transparent;
+  width:193px;
+  height:26px;
+  background: url(../img/logo-footer-ak2.png) no-repeat center / cover;
+  margin:0 auto 20px;
+  image-rendering: -webkit-optimize-contrast;
+}
+footer .f_link {
+  margin-bottom:25px;
+}
+footer .f_link li {
+  position:relative;
+  display: inline-block;
+  padding:0 10px;
+  font-size:14px;
+}
+footer .f_link li:first-child {
+  padding-left:0;
+}
+footer .f_link li:last-child {
+  padding-right:0;
+}
+footer .f_link li::after {
+  content: '';
+  display: inline-block;
+  width:1px;
+  height:16px;
+  background-color:#fff;
+  position: absolute;
+  top:5px;
+  right:-3px;
+}
+footer .f_link li:last-child::after {
+  display: none;
+}
+footer .f_link a {
+  display:block;
+  color:#fff;
+}
+footer .f_sns {
+  display: none;
+}
 
-
+footer .f_right {
+  font-size:12px;
+  line-height:2.3;
+}
 
 /* 테블릿 */
 @media all and (min-width:860px) {
@@ -510,37 +570,59 @@ h2 {
     font-size:18px;
     height:50px;
   }
+  /* 테블릿 스페셜관 끝 베스트 관 시작 */
   h2 {
     font-size:42px;
     text-align:left;
     margin-bottom:50px;
     /* border-bottom:2px solid #333; */
-    text-decoration:underline;
   }
-  /* 테블릿 스페셜관 끝 베스트 관 시작 */
   .best {
     padding:100px 0;
   }
-
-  .best .tabmenu .bestseller {
+  .best .tabmenu h2.bs_tit {
     display:block;
   }
-  .best .tabmenu .bestreview {
-    display: none;
+  .best .tabmenu h2 a {
+    display: block;
+    color:#666;
   }
-  .best .tabmenu li.bestseller .bs_board ul li {
+  .best .tabmenu h2.on a {
+    text-decoration:underline;
+    color:#333;
+  }
+  .best .tabmenu h2.br_tit {
+    position:absolute;
+    top:0;
+    left:350px;
+  }
+  .best .tabmenu ul {
+    display:none;
+  }
+  .best .tabmenu ul.on  {
+    display: block;
+  }
+
+  .best .tabmenu ul.br_board {
+    position:absolute;
+    top:92px;
+    left:0;
+    width:100%;
+    height:1300px;
+  }
+  .best .tabmenu .bs_board li {
     width:calc((100% - 20px) / 2);
     margin-right:20px;
     float:left;
   }
-  .best .tabmenu li.bestseller .bs_board ul li:nth-child(2n) {
+  .best .tabmenu .bs_board li:nth-child(2n) {
     margin-right:0;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_img {
+  .best .tabmenu .bs_board .bs_img {
     position:relative;
     margin-bottom:20px;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_img p {
+  .best .tabmenu .bs_board .bs_img p {
     width:40px;
     height:40px;
     background:url(../img/icon/bs_label.png) no-repeat top / 40px 40px;
@@ -551,43 +633,43 @@ h2 {
     font-size:18px;
     font-weight:bold;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt {
+  .best .tabmenu .bs_board .bs_txt {
     margin-bottom:45px;
     padding:0 20px;
   }
-  .best .tabmenu li.bestseller .bs_board li:nth-child(3) .bs_txt {
+  .best .tabmenu .bs_board li:nth-child(3) .bs_txt {
     margin-bottom:0;
   }
-  .best .tabmenu li.bestseller .bs_board li:nth-child(4) .bs_txt {
+  .best .tabmenu .bs_board li:nth-child(4) .bs_txt {
     margin-bottom:0;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt h4 {
+  .best .tabmenu .bs_board .bs_txt h4 {
     font-size:20px;
     margin-bottom:7px;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt h4 span {
+  .best .tabmenu .bs_board .bs_txt h4 span {
     font-size:48px;
     vertical-align: middle;
     font-weight:normal;
     line-height:0.8;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt .bs_brand {
+  .best .tabmenu .bs_board .bs_txt .bs_brand {
     margin-bottom:5px;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt .title {
+  .best .tabmenu .bs_board .bs_txt .title {
     font-size:18px;
     margin-bottom:5px;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt .price {
+  .best .tabmenu .bs_board .bs_txt .price {
     font-size:18px;
     font-weight:bold;
     color:#000;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt .price strong {
+  .best .tabmenu .bs_board .bs_txt .price strong {
     color:#f5121e;
     margin-right:15px;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt .price span {
+  .best .tabmenu .bs_board .bs_txt .price span {
     font-size:14px;
     font-weight:normal;
     color:#666;
@@ -633,6 +715,9 @@ h2 {
     display:none;
   }
   .service {
+    margin-top:100px;
+    padding:35px 0;
+    display: block;
     background-color:#e1e5f0;
   }
   .service .inner {
@@ -699,6 +784,18 @@ h2 {
   }
   .service .aklover {
     display:none;
+  }
+  /* 테블릿 고객서비스 끝 푸터 시작 */
+  footer .f_sns {
+    display: block;
+    margin-bottom:80px;
+  }
+  footer .f_sns ul li {
+    display: inline-block;
+    margin-right:40px;
+  }
+  footer .f_sns ul li:last-child {
+    margin-right:0;
   }
 }
 
@@ -781,18 +878,18 @@ h2 {
     margin-right:0px;
   }
 /* 데스크탑 스페셜관 끝 베스트관 시작 */
-  .best .tabmenu li.bestseller .bs_board .bs_img {
+  .best .tabmenu .bs_board .bs_img {
     width:300px;
     float:left;
   }
-  .best .tabmenu li.bestseller .bs_board .bs_txt {
+  .best .tabmenu .bs_board .bs_txt {
     margin-bottom:0;
     float:left;
     padding:0 20px;
     width:calc(100% - 300px);
     letter-spacing: -0.6;
   }
-  .best .tabmenu li.bestseller .bs_board li:nth-child(3) .bs_img, .best .tabmenu li.bestseller .bs_board  li:nth-child(4) .bs_img {
+  .best .tabmenu .bs_board li:nth-child(3) .bs_img, .best .tabmenu .bs_board  li:nth-child(4) .bs_img {
     margin-bottom:0;
   }
   /* 데스크탑 베스트관 끝 뉴프로덕트 시작 */
@@ -836,5 +933,22 @@ h2 {
     border:1px solid #666;
     border-radius:16px;
     margin-top:28px;
+  }
+  /* 데스크탑 고객서비스 끝 푸터 시작 */
+  footer {
+    text-align: left;;
+  }
+  footer .f_logo {
+    margin:0;
+    margin-bottom:20px;
+  }
+  footer .f_sns {
+    margin-bottom:0;
+  }
+  footer .f_left {
+    float:left;
+  }
+  footer .f_right {
+    float:right;
   }
 }
