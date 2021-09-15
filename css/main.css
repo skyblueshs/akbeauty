@@ -603,13 +603,7 @@ footer .f_right {
     display: block;
   }
 
-  .best .tabmenu ul.br_board {
-    position:absolute;
-    top:92px;
-    left:0;
-    width:100%;
-    height:1300px;
-  }
+
   .best .tabmenu .bs_board li {
     width:calc((100% - 20px) / 2);
     margin-right:20px;
@@ -676,6 +670,14 @@ footer .f_right {
     margin-left:15px;
     text-decoration:line-through;
   }
+  .best .tabmenu .br_board li {
+    margin-bottom: 60px;
+  }
+  .best .tabmenu .br_board .br_txt p.review {
+    width:470px;
+    -webkit-line-clamp:4;
+  }
+  
   /* 테블릿 베스트관 끝 뉴프로덕트 시작 */
   .newproduct {
     padding:100px 0;
@@ -891,6 +893,27 @@ footer .f_right {
   }
   .best .tabmenu .bs_board li:nth-child(3) .bs_img, .best .tabmenu .bs_board  li:nth-child(4) .bs_img {
     margin-bottom:0;
+  }
+  .best .tabmenu .br_board li {
+    float:left;
+    width:calc((100% - 20px) / 2);
+    margin-right:20px;
+  }
+  .best .tabmenu .br_board li:nth-child(2n) {
+    margin-right:0;
+  }
+  .best .tabmenu .br_board .br_img {
+    width:277px;
+  }
+  .best .tabmenu .br_board .br_txt p.review {
+    -webkit-line-clamp:5;
+    width:290px;
+  }
+  .best .tabmenu .br_board .br_txt {
+    width:auto;
+  }
+  .best .tabmenu .br_board li:nth-child(3), .best .tabmenu .br_board li:nth-child(4) {
+    margin-bottom: 0;
   }
   /* 데스크탑 베스트관 끝 뉴프로덕트 시작 */
   .newproduct .np_img {
