@@ -54,7 +54,8 @@ header {
   border-bottom:1px solid #949494;
   padding-top:13px;
 }
-h1 {
+h1 a {
+  display: block;
   width:140px;
   height:19px;
   font-size:0;
@@ -156,7 +157,6 @@ nav .whistle {
 }
 
 .swiper-slide {
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -181,7 +181,9 @@ nav .whistle {
 
 
 #slide {
-  position:relative;
+  width:100%;
+  height:100%;
+  /* position:relative; */
 }
 #slide .s_button {
   position:absolute;
@@ -464,7 +466,7 @@ footer .f_right {
     /* padding:0 20px; */
     width:860px;
   }
-  h1 {
+  h1 a {
     margin:0;
     width:210px;
     height:38px;
@@ -540,9 +542,9 @@ footer .f_right {
     right:20px;
   }
     /* 테블릿 네비게이션 끝, 슬라이드 시작 */
-  #slide > a {
+  /* #slide > a {
     height:650px
-  }
+  } */
   #slide .s_button {
     right:auto;
     left:50%;
@@ -558,7 +560,7 @@ footer .f_right {
     line-height:40px;
     font-size:24px;
   }
-  /* 테블릿 네비게이션 끝, 브랜드관 시작 */
+  /* 테블릿 슬라이드 끝, 브랜드관 시작 */
   #brandshop .inner {
     padding:0;
   }
@@ -876,6 +878,7 @@ footer .f_right {
   header .search {
     width:400px;
   }
+  /* 헤드 끝 슬라이드 시작 */
   #slide .s_button {
     width:275px;
     height:60px;

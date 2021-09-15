@@ -1,5 +1,7 @@
 $(function(){		//시작
-
+	// $("a").click(function(){
+	// 	event.preventDefault();
+	// });
 //탭메뉴 시작
   $('.tabmenu h2').click(function(){		
 		event.preventDefault();

@@ -13,7 +13,8 @@ header {
   border-bottom:1px solid #949494;
   padding-top:13px;
 }
-h1 {
+h1 a {
+  display: block;
   width:140px;
   height:19px;
   font-size:0;
@@ -94,8 +95,135 @@ nav .gnb li a {
 nav .whistle {
   display: none;
 }
-/* 네비게이션 영역 끝, 타이틀배너 시작 */
+/* 네비게이션 영역 끝, 컨텐츠 시작 */
+#container .content {
+  padding:50px 0;
+  position: relative;
+}
+#container .content h2 {
+  position: absolute;
+  top:-100px;
+  letter-spacing: -2px;
+  font-size:36px;
+  line-height: 47px;
+  font-weight:normal;
+  width:250px;
+  height:50px;
+  text-align: center;
+  background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 250px 25px;
+}
+#container .content h2.on {
+  background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
+  font-weight:bold;
+}
+#container .content h2.ing_event_tit {
+  left:25%;
+  transform: translateX(-50%);
+}
+#container .content h2.end_event_tit {
+  left:75%;
+  transform: translateX(-50%);
+}
+#container .content ul {
+  margin-top:100px;
+  display: none;
+}
+#container .content ul.on {
+  display: block;
+}
+#container .content ul li {
+  margin-bottom:30px;
+}
+#container .content ul li:last-child {
+  margin-bottom:0;
+}
+#container .content .event_txt {
+  padding:20px;
+}
+#container .content .event_txt p.status_on {
+  color:#fff;
+  width:80px;
+  height:30px;
+  line-height: 30px;
+  background-color:#ec8260;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom:19px;
+}
+#container .content .event_txt p.status_off {
+  color:#fff;
+  width:80px;
+  height:30px;
+  line-height: 30px;
+  background-color:#636363;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom:19px;
+}
+#container .content .event_txt h3 {
+  font-size:24px;
+  margin-bottom:15px;
+}
+#container .content .event_txt p.date {
+  font-size:14px;
+}
 
+/* 컨텐츠 끝 푸터 시작 */
+footer {
+  background-color: #333;
+  padding:50px 0;
+  color:#fff;
+  text-align: center;
+}
+footer .f_logo {
+  font-size:0;
+  color:transparent;
+  width:193px;
+  height:26px;
+  background: url(../img/logo-footer-ak2.png) no-repeat center / cover;
+  margin:0 auto 20px;
+  image-rendering: -webkit-optimize-contrast;
+}
+footer .f_link {
+  margin-bottom:25px;
+}
+footer .f_link li {
+  position:relative;
+  display: inline-block;
+  padding:0 10px;
+  font-size:14px;
+}
+footer .f_link li:first-child {
+  padding-left:0;
+}
+footer .f_link li:last-child {
+  padding-right:0;
+}
+footer .f_link li::after {
+  content: '';
+  display: inline-block;
+  width:1px;
+  height:16px;
+  background-color:#fff;
+  position: absolute;
+  top:5px;
+  right:-3px;
+}
+footer .f_link li:last-child::after {
+  display: none;
+}
+footer .f_link a {
+  display:block;
+  color:#fff;
+}
+footer .f_sns {
+  display: none;
+}
+
+footer .f_right {
+  font-size:12px;
+  line-height:2.3;
+}
 
 
 
@@ -110,7 +238,7 @@ nav .whistle {
     /* padding:0 20px; */
     width:860px;
   }
-  h1 {
+  h1 a {
     margin:0;
     width:210px;
     height:38px;
@@ -185,9 +313,48 @@ nav .whistle {
     top:16px;
     right:20px;
   }
-    /* 테블릿 네비게이션 끝, 타이틀배너 시작 */
+    /* 테블릿 네비게이션 끝, 컨텐츠 시작 */
+    #container .content {
+      padding:100px 0;
+    }
+    #container .content h2 {
+      top:-100px;
+    }
+    #container .content ul {
+      margin-top:100px;
+    }
+    #container .content ul li {
+      margin-right:16px;
+      margin-bottom:30px;
+      float:left;
+      width:calc((100% - 16px) / 2)
+    }
+    #container .content ul li:nth-child(2n) {
+      margin-right:0;
+    }
+    #container .content ul li:last-child {
+      margin-bottom:30px;
+    }
+    
+    #container .content .event_txt {
+      padding:20px 0;
+    }
+    
+    
+    
+    /* 테블릿 컨텐츠 끝 푸터 시작 */
+  footer .f_sns {
+    display: block;
+    margin-bottom:80px;
+  }
+  footer .f_sns ul li {
+    display: inline-block;
+    margin-right:40px;
+  }
+  footer .f_sns ul li:last-child {
+    margin-right:0;
+  }
 }
-
 
 
 
@@ -201,5 +368,30 @@ nav .whistle {
     width:400px;
   }
 
-  /* 데스크탑 헤더 끝 타이틀배너 시작 */
+  /* 데스크탑 헤더 끝 컨텐츠 시작 */
+  #container .content ul li {
+    margin-right:50px;
+    width:calc((100% - 50px) / 2)
+  }
+
+
+
+  /* 데스크탑 컨텐츠 끝 푸터 시작 */
+  footer {
+    text-align: left;;
+  }
+  footer .f_logo {
+    margin:0;
+    margin-bottom:20px;
+  }
+  footer .f_sns {
+    margin-bottom:0;
+  }
+  footer .f_left {
+    float:left;
+  }
+  footer .f_right {
+    float:right;
+  }
+
 }
