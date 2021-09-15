@@ -134,9 +134,7 @@ nav .whistle {
 #container .content ul li {
   margin-bottom:30px;
 }
-#container .content ul li:last-child {
-  margin-bottom:0;
-}
+
 #container .content .event_txt {
   padding:20px;
 }
@@ -332,10 +330,6 @@ footer .f_right {
     #container .content ul li:nth-child(2n) {
       margin-right:0;
     }
-    #container .content ul li:last-child {
-      margin-bottom:30px;
-    }
-    
     #container .content .event_txt {
       padding:20px 0;
     }

@@ -11,7 +11,13 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script>
     $(function(){   //실행틀 시작
-
+      $(".content h2").click(function(){
+        event.preventDefault()
+        $(".content h2").removeClass("on");
+        $(this).addClass("on");
+        $(".content ul").removeClass("on");
+        $(this).next("ul").addClass("on")
+      });
 
 
     });     //실행틀 끝
