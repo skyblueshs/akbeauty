@@ -49,6 +49,18 @@ $(function(){		//시작
 	});
 	//모달레이어 팝업 끝
 
+
+	// 서브 탭메뉴 시작
+	$(".content h2").click(function(){
+		event.preventDefault()
+		$(".content h2").removeClass("on");
+		$(this).addClass("on");
+		$(".content ul").removeClass("on");
+		$(this).next("ul").addClass("on")
+	});
+	//서브 탭메뉴 끝
+
+
 });		//끝
 
 
