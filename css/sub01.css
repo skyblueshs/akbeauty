@@ -104,16 +104,16 @@ nav .whistle {
   position: absolute;
   top:-100px;
   letter-spacing: -2px;
-  font-size:36px;
-  line-height: 47px;
   font-weight:normal;
-  width:250px;
-  height:50px;
   text-align: center;
-  background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 250px 25px;
+  font-size:20px;
+  line-height: 30px;
+  width:150px;
+  height:30px;
+  background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 150px 15px;
 }
 #container .content h2.on {
-  background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
+  background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 150px 30px ;
   font-weight:bold;
 }
 #container .content h2.ing_event_tit {
@@ -311,32 +311,41 @@ footer .f_right {
     top:16px;
     right:20px;
   }
-    /* 테블릿 네비게이션 끝, 컨텐츠 시작 */
-    #container .content {
-      padding:100px 0;
-    }
-    #container .content h2 {
-      top:-100px;
-    }
-    #container .content ul {
-      margin-top:100px;
-    }
-    #container .content ul li {
-      margin-right:16px;
-      margin-bottom:30px;
-      float:left;
-      width:calc((100% - 16px) / 2)
-    }
-    #container .content ul li:nth-child(2n) {
-      margin-right:0;
-    }
-    #container .content .event_txt {
-      padding:20px 0;
-    }
-    
-    
-    
-    /* 테블릿 컨텐츠 끝 푸터 시작 */
+  /* 테블릿 네비게이션 끝, 컨텐츠 시작 */
+  
+  #container .content {
+    padding:100px 0;
+  }
+  #container .content h2 {
+    font-size:36px;
+    line-height: 47px;
+    width:250px;
+    height:50px;
+    background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 250px 25px;
+  }
+  #container .content h2.on {
+    background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
+  }
+  
+  #container .content ul {
+    margin-top:100px;
+  }
+  #container .content ul li {
+    margin-right:16px;
+    margin-bottom:30px;
+    float:left;
+    width:calc((100% - 16px) / 2)
+  }
+  #container .content ul li:nth-child(2n) {
+    margin-right:0;
+  }
+  #container .content .event_txt {
+    padding:20px 0;
+  }
+  
+  
+  
+  /* 테블릿 컨텐츠 끝 푸터 시작 */
   footer .f_sns {
     display: block;
     margin-bottom:80px;
