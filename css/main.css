@@ -50,9 +50,14 @@
 
 /* 모바일 */
 header {
+  position:fixed;
+  top:0;
+  width:100%;
   height:45px;
   border-bottom:1px solid #949494;
   padding-top:13px;
+  z-index: 80;
+  background-color:#fff;
 }
 h1 a {
   display: block;
@@ -104,7 +109,7 @@ header .menu {
   width:45px;
   height:45px;
   position:absolute;
-  padding: calc((45px - 15px) / 2) 15px ;
+  padding: calc((45px - 15px) / 2) ;
   top:-13px;
   left:0;
   display: block;
@@ -127,7 +132,12 @@ header .menu span {
 }
 /* 헤더 끝, 네비게이션 시작 */
 nav {
+  position:fixed;
+  width:100%;
+  top:45px;
   border-bottom:1px solid #949494;
+  background-color:#fff;
+  z-index: 80;
 }
 nav .gnb {
   text-align:center;
@@ -181,9 +191,9 @@ nav .whistle {
 
 
 #slide {
+  padding-top:72px;
   width:100%;
-  height:100%;
-  /* position:relative; */
+  position:relative;
 }
 #slide .s_button {
   position:absolute;
@@ -195,6 +205,7 @@ nav .whistle {
   height:20px;
   background-color:rgba(0,0,0,0.5);
   border-radius: 20px;
+  z-index:10;
 }
 #slide .s_button p {
   color:#fff;
@@ -514,6 +525,9 @@ footer .f_right {
     height:40px;
   }
   /* 테블릿 헤더 끝, 네비게이션 시작 */
+  nav {
+    top:90px;
+  }
   nav .gnb {
     text-align:left;
   }
@@ -545,6 +559,9 @@ footer .f_right {
   /* #slide > a {
     height:650px
   } */
+  #slide {
+    padding-top:140px;
+  }
   #slide .s_button {
     right:auto;
     left:50%;
