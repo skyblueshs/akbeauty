@@ -15,10 +15,11 @@ $(function(){		//시작
 //스와이퍼 시작
 	var swiper = new Swiper(".mySwiper", {		
 		loop:true,
-		spaceBetween: 30,
+		// spaceBetween: 30,
 		centeredSlides: true,
+		speed:600,
 		autoplay: {
-			delay: 2500,
+			delay: 3000,
 			disableOnInteraction: false,
 		},
 		pagination: {
