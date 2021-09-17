@@ -235,6 +235,10 @@ footer .f_right {
   font-size:12px;
   line-height:2.3;
 }
+footer .f_right a {
+  color:#fff;
+}
+
 
 
 

@@ -456,6 +456,10 @@ footer .f_right {
   font-size:12px;
   line-height:2.3;
 }
+footer .f_right a {
+  color:#fff;
+}
+
 
 /* 테블릿 */
 @media all and (min-width:860px) {
@@ -1153,9 +1157,6 @@ footer .f_right {
   }
   footer .f_right {
     float:right;
-  }
-  footer .f_right a {
-    color:#fff;
   }
   footer .f_right a:hover {
     text-decoration: underline;
