@@ -9,9 +9,14 @@
 }
 /* 모바일 */
 header {
+  position:fixed;
+  top:0;
+  width:100%;
   height:45px;
   border-bottom:1px solid #949494;
   padding-top:13px;
+  z-index: 99;
+  background-color:#fff;
 }
 h1 a {
   display: block;
@@ -51,7 +56,7 @@ header .menu {
   width:45px;
   height:45px;
   position:absolute;
-  padding: calc((45px - 15px) / 2) 15px ;
+  padding: calc((45px - 15px) / 2) ;
   top:-13px;
   left:0;
   display: block;
@@ -74,7 +79,12 @@ header .menu span {
 }
 /* 헤더 끝, 네비게이션 시작 */
 nav {
+  position:fixed;
+  width:100%;
+  top:45px;
   border-bottom:1px solid #949494;
+  background-color:#fff;
+  z-index: 99;
 }
 nav .gnb {
   text-align:center;
@@ -96,6 +106,9 @@ nav .whistle {
   display: none;
 }
 /* 네비게이션 영역 끝, 컨텐츠 시작 */
+#container {
+  padding-top:72px;
+}
 #container .content {
   padding:50px 0;
   position: relative;
@@ -111,10 +124,10 @@ nav .whistle {
   width:150px;
   height:30px;
   background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 150px 15px;
+  transition: all 0.5s;
 }
 #container .content h2.on {
   background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 150px 30px ;
-  font-weight:bold;
 }
 #container .content h2.ing_event_tit {
   left:25%;
@@ -226,7 +239,7 @@ footer .f_right {
 
 
 
-
+/* 테블릿 시작 */
 @media all and (min-width:860px) {
   header {
     height:90px;
@@ -284,6 +297,9 @@ footer .f_right {
     height:40px;
   }
   /* 테블릿 헤더 끝, 네비게이션 시작 */
+  nav {
+    top:90px;
+  }
   nav .gnb {
     text-align:left;
   }
@@ -312,7 +328,9 @@ footer .f_right {
     right:20px;
   }
   /* 테블릿 네비게이션 끝, 컨텐츠 시작 */
-  
+  #container {
+    padding-top:140px;
+  }
   #container .content {
     padding:100px 0;
   }
@@ -370,13 +388,67 @@ footer .f_right {
   header .search {
     width:400px;
   }
+  header .utill li a{
+    transition:all 0.5s
+  }
+  header .utill li:hover a{
+    background-color:#ddd;
+  }
+  /* 데스크탑 헤드 끝 네비게이션 시작 */
+  nav .gnb li::after {
+    content:'';
+    display: block;
+    width:120%;
+    height:3px;
+    background-color: hotpink;
+    margin-left:-10%;
+    margin-top:-4px;
+    opacity: 0;
+    transition: all 0.7s;
+  }
+  nav .gnb li:hover::after {
+    opacity: 0.7;
+  }
+  nav a.whistle {
+    transition: all 0.5s;
+  }
+  nav a.whistle:hover {
+    background-color: #ddd;
+  }
+
 
   /* 데스크탑 헤더 끝 컨텐츠 시작 */
+  #container .content h2 {
+    transition: all 0.5s;
+  }
+  #container .content h2:hover {
+    background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
+  }
+  
+  /* #container .content h2 a {
+    transition: all 0.5s;
+  }
+  #container .content h2 a::after {
+    transition:all 1s;
+    content: '';
+    display: block;
+    width:80%;
+    height:3px;
+    background-color:#333;
+    margin:0 auto;
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  #container .content h2:hover a::after {
+    opacity: 1;
+  } */
   #container .content ul li {
     margin-right:50px;
     width:calc((100% - 50px) / 2)
   }
-
+  #container .content ul li:hover h3, #container .content ul li:hover p.date {
+    text-decoration: underline;
+  }
 
 
   /* 데스크탑 컨텐츠 끝 푸터 시작 */
@@ -387,14 +459,30 @@ footer .f_right {
     margin:0;
     margin-bottom:20px;
   }
+  footer .f_link ul li:hover a {
+    text-decoration: underline;
+  }
   footer .f_sns {
     margin-bottom:0;
+  }
+  footer .f_sns ul li a
+  {
+    transition: all 0.3s;
+  }
+  footer .f_sns ul li:hover a {
+    opacity: 0.5;
   }
   footer .f_left {
     float:left;
   }
   footer .f_right {
     float:right;
+  }
+  footer .f_right a {
+    color:#fff;
+  }
+  footer .f_right a:hover {
+    text-decoration: underline;
   }
 
 }

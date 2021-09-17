@@ -14,36 +14,40 @@
   left:0;
   width:100%;
   height:100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.5);
   display: none;
+  z-index:9998;
 }
 #overLayer {
   width:100%;
-  max-width: 830px;
+  max-width: 800px;
   height:calc(100vh / 16 * 9);
-  max-height:515px;
-  padding:50px 15px 15px;
+  max-height:450px;
+  /* padding:50px 15px 15px; */
   background-color: #fff;
   position: fixed;
   left:50%;
   top:50%;
   transform:translate(-50%, -50%);
   display: none;
+  z-index:9999;
 }
 #overLayer .close {
   display: block;
   position:absolute;
-  top:10px;
-  right:10px;
-  width:30px;
-  height:30px;
-  background-color: #e1e5f0;
-  color:#666;
+  top:-40px;
+  right:-40px;
+  font-size:30px;
+  width:50px;
+  height:50px;
+  color:#fff;
   text-align:center;
-  line-height:30px;
+  line-height:50px;
   border-radius: 50%;
-  z-index:99;
   text-decoration: none;
+}
+#overLayer .close:hover {
+  color:#333;
 }
 /* 모달 레이어 팝업 끝 */
 
@@ -56,7 +60,7 @@ header {
   height:45px;
   border-bottom:1px solid #949494;
   padding-top:13px;
-  z-index: 80;
+  z-index: 99;
   background-color:#fff;
 }
 h1 a {
@@ -92,19 +96,7 @@ header .utill li a {
   color:transparent;
   font-size:0;
   display: block;
-  /* background-repeat: no-repeat;
-  background-position: top;
-  background-size:40px 40px; */
 }
-/* header .utill li a.login {
-  background-image: url(../img/icon/ico-mybox-login.png);
-}
-header .utill li a.mypage {
-  background-image: url(../img/icon/ico-mybox-human.png);
-}
-header .utill li a.cart {
-  background-image: url(../img/icon/ico-mybox-bag.png);
-} */
 header .menu {
   width:45px;
   height:45px;
@@ -137,7 +129,7 @@ nav {
   top:45px;
   border-bottom:1px solid #949494;
   background-color:#fff;
-  z-index: 80;
+  z-index: 99;
 }
 nav .gnb {
   text-align:center;
@@ -198,8 +190,6 @@ nav .whistle {
 #slide .s_button {
   position:absolute;
   bottom:25px;
-  /* left:50%;
-  transform: translateX(-50%); */
   right:20px;
   width:65px;
   height:20px;
@@ -292,7 +282,7 @@ h2 {
   margin-top:5px;
 }
 .best .tabmenu .br_board .br_txt p.star_id span {
-  margin-left:70px;
+  margin-left:40px;
 }
 .best .tabmenu .br_board .br_txt p.br_brand {
   font-size:14px;
@@ -354,7 +344,7 @@ h2 {
   font-weight:bold;
   width:130px;
   height:32px;
-  border:1px solid #000;
+  border:1px solid #333;
   line-height:30px;
   border-radius:16px;
   text-align:left;
@@ -602,10 +592,7 @@ footer .f_right {
     padding-left:15px;
     background:url(../img/ico-morebtn-arrow.png) no-repeat 175px 10px;
   }
-  #brandshop .b_age20 a:hover {
-    background-color:#333;
-    color:#fff;
-  }
+
   #brandshop .b_product {
     /* position:absolute;
     top:0;
@@ -667,6 +654,7 @@ footer .f_right {
   }
   .best .tabmenu h2.bs_tit {
     display:block;
+    width:auto;
   }
   .best .tabmenu h2 a {
     display: block;
@@ -676,6 +664,11 @@ footer .f_right {
     text-decoration:underline;
     color:#333;
   }
+  .best .tabmenu h2.bs_tit {
+    position:absolute;
+    top:0;
+    left:0;
+  }
   .best .tabmenu h2.br_tit {
     position:absolute;
     top:0;
@@ -683,6 +676,7 @@ footer .f_right {
   }
   .best .tabmenu ul {
     display:none;
+    padding-top:150px
   }
   .best .tabmenu ul.on  {
     display: block;
@@ -846,9 +840,6 @@ footer .f_right {
     border:1px solid #666;
     border-radius:16px;
   }
-  .service .cs ul li:hover a {
-    background-color:#ddd;
-  }
   .service .notice {
     width:60%;
     float:left;
@@ -857,9 +848,6 @@ footer .f_right {
   }
   .service .notice .s_tit {
     margin-bottom:13px;
-  }
-  .service .notice ul li:hover p {
-    text-decoration:underline;
   }
   .service .notice ul li a {
     display:block;
@@ -895,14 +883,45 @@ footer .f_right {
   header .search {
     width:400px;
   }
-  /* 헤드 끝 슬라이드 시작 */
+  header .utill li a{
+    transition:all 0.5s
+  }
+  header .utill li:hover a{
+    background-color:#ddd;
+  }
+  /* 데스크탑 헤드 끝 네비게이션 시작 */
+  nav .gnb li::after {
+    content:'';
+    display: block;
+    width:120%;
+    height:3px;
+    background-color: hotpink;
+    margin-left:-10%;
+    margin-top:-4px;
+    opacity: 0;
+    transition: all 0.7s;
+  }
+  nav .gnb li:hover::after {
+    opacity: 0.7;
+  }
+  nav a.whistle {
+    transition: all 0.5s;
+  }
+  nav a.whistle:hover {
+    background-color: #ddd;
+  }
+
+  /* 데스크탑 네비게이션 끝 슬라이드 시작 */
   #slide .s_button {
     width:275px;
     height:60px;
     border-radius: 30px;
     /* padding:14px 18px; */
+    display: block;
+    text-align:center;
   }
-  #slide .s_button p {
+
+  #slide .s_button p.swiper-pagination {
     margin-right:22px;
   }
   #slide .s_button p strong {
@@ -912,35 +931,58 @@ footer .f_right {
   #slide .s_button a {
     color:transparent;
     font-size:0;
+    transform:translateY(-26px)
   }
+  
   #slide .s_button a, #slide .s_button p {
-    display: block;
-    float:left;
+    position:unset;
+    display: inline-block;
   }
   #slide .s_button a {
     height:33px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top:13.5px;
-    
+  }
+  #slide .s_button p {
+    width:auto;
+    line-height:60px;
+    font-size:16px;
+    transform:translateY(-2px)
+  }
+  #slide .s_button p .swiper-pagination-current {
+    font-size:24px;
   }
   #slide .s_button a.left_arrow {
     width:34px;
     background-image:url(../img/icon/visual_btn_left.png);
     margin-right:22px;
-    margin-left:18px;
   }
-  #slide .s_button a.play_button {
+  #slide .s_button a.stop_button {
     width:33px;
     background-image:url(../img/icon/visual_btn_stop.png);
     margin-right:22px;
   }
+  #slide .s_button a.play_button {
+    width:33px;
+    background-image:url(../img/icon/visual_btn_play.png);
+    margin-right:22px;
+    display: none;
+  }
   #slide .s_button a.right_arrow {
     width:34px;
     background-image:url(../img/icon/visual_btn_right.png);
-    margin-right:18px;
   }
   /* 데스크탑 슬라이드 끝, 브랜드샵 시작 */
+  #brandshop .b_age20 a {
+    transition: all 0.3s;
+  }
+  #brandshop .b_age20 a:hover {
+    background-color:#666;
+    color:#fff;
+  }
+  #brandshop .b_product li:hover h3 {
+    text-decoration: underline;
+  }
   #brandshop .b_product ul li {
     float:left;
     margin-right:40px;
@@ -953,7 +995,6 @@ footer .f_right {
     display:block;
     margin-right:0;
   }
-
 /* 데스크탑 브랜드샵 끝 스페셜관 시작 */
   .p_special .sp_product li {
     width:calc((100% - 60px) / 4);
@@ -965,7 +1006,17 @@ footer .f_right {
   .p_special .sp_product li:nth-child(4){
     margin-right:0px;
   }
+  .p_special .sp_product li:hover h3 {
+    text-decoration: underline;
+  }
 /* 데스크탑 스페셜관 끝 베스트관 시작 */
+
+  .best .tabmenu h2 a {
+    transition: all 0.5s;
+  }
+  .best .tabmenu h2:hover a {
+    text-decoration: underline;
+  }
   .best .tabmenu .bs_board .bs_img {
     width:300px;
     float:left;
@@ -1001,10 +1052,19 @@ footer .f_right {
   .best .tabmenu .br_board li:nth-child(3), .best .tabmenu .br_board li:nth-child(4) {
     margin-bottom: 0;
   }
+  .best .tabmenu .bs_board li:hover .bs_txt p.bs_brand, .best .tabmenu .bs_board li:hover .bs_txt p.title, .best .tabmenu .br_board li:hover .br_txt p.review {
+    text-decoration:underline;
+  }
   /* 데스크탑 베스트관 끝 뉴프로덕트 시작 */
   .newproduct .np_img {
     width:60%;
     float:left;
+  }
+  .newproduct .np_img > a > p {
+    transition: all 0.5s;
+  }
+  .newproduct .np_img:hover > a > p {
+    opacity: 0.6;
   }
   .newproduct .np_txt {
     width:40%;
@@ -1012,9 +1072,26 @@ footer .f_right {
     float:left;
     padding:145px 0;
   }
+  .newproduct .np_txt a.more {
+    transition: all 0.5s;
+  }
+  .newproduct .np_txt a.more:hover {
+    background-color: #666;
+    color:#fff;
+  }
   /* 데스크탑 뉴프로덕트 끝 서비스 시작 */
   .service .cs {
     width:30%;
+  }
+  .service .cs ul li a {
+    transition: all 0.5s;
+  }
+  .service .cs ul li:hover a {
+    color:#fff;
+    background-color:#666;
+  }
+  .service .notice ul li:hover p {
+    text-decoration:underline;
   }
   .service .notice {
     width:50%;
@@ -1030,6 +1107,13 @@ footer .f_right {
 
   .service .aklover a {
     display:block;
+  }
+  .service .aklover a p {
+    transition: all 0.5s;
+  }
+  .service .aklover a:hover p {
+    background-color:#666;
+    color:#fff;
   }
   .service .aklover a img {
     height:120px;
@@ -1051,13 +1135,29 @@ footer .f_right {
     margin:0;
     margin-bottom:20px;
   }
+  footer .f_link ul li:hover a {
+    text-decoration: underline;
+  }
   footer .f_sns {
     margin-bottom:0;
+  }
+  footer .f_sns ul li a
+  {
+    transition: all 0.3s;
+  }
+  footer .f_sns ul li:hover a {
+    opacity: 0.5;
   }
   footer .f_left {
     float:left;
   }
   footer .f_right {
     float:right;
+  }
+  footer .f_right a {
+    color:#fff;
+  }
+  footer .f_right a:hover {
+    text-decoration: underline;
   }
 }

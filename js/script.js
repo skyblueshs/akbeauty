@@ -23,6 +23,7 @@ $(function(){		//시작
 		},
 		pagination: {
 			el: ".swiper-pagination",
+			type: "fraction",
 			clickable: true,
 		},
 		navigation: {
@@ -30,6 +31,23 @@ $(function(){		//시작
 			prevEl: ".left_arrow",
 		},
 	});		
+	$(".stop_button").click(function(){
+		swiper.autoplay.stop();
+		$(".stop_button").css({"display" : "none"});
+		$(".play_button").css({"display" : "inline-block"});
+
+		// $(".stop_button").removeClass("stop_button").addClass("play_button");
+		// return false;
+	});
+	$(".play_button").click(function(){
+		swiper.autoplay.start();
+		$(".stop_button").css({"display" : "inline-block"});
+		$(".play_button").css({"display" : "none"});
+
+		// $(".play_button").removeClass("play_button").addClass("stop_button");
+		// return false;
+	});
+
 	//스와이퍼 끝
 
 
@@ -44,7 +62,13 @@ $(function(){		//시작
 
 	$(".newproduct .np_img a").click(function(){
 		$("#glayLayer").show();
-		$("#overLayer").show().html("<iframe width='100%' height='100%' src='https://www.youtube.com/embed/YLz3QNoI-Ak?amp;autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe /><a href='#' class='close'>X</a>");
+
+		//오토플레이 off
+		$("#overLayer").show().html("<iframe width='100%' height='100%' src='https://www.youtube.com/embed/YLz3QNoI-Ak' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe /><a href='#' class='close'>X</a>");
+
+		//오토플레이 on
+		// $("#overLayer").show().html("<iframe width='100%' height='100%' src='https://www.youtube.com/embed/YLz3QNoI-Ak?amp;autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe /><a href='#' class='close'>X</a>");
+		
 		return false;
 	});
 	//모달레이어 팝업 끝
