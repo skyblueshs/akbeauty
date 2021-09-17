@@ -240,7 +240,7 @@ h2 {
 }
 .p_special .sp_product li .sp_txt {
   margin-top:10px;
-  text-shadow: 3px 3px 4px rgba(255,255,255,0.8);
+  /* text-shadow: 5px 5px 7px rgba(255,255,255,0.7); */
 }
 .p_special .sp_product li .sp_brand {
   font-size:10px;

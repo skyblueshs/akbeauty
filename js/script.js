@@ -38,7 +38,7 @@ $(function(){		//시작
 		$(".play_button").css({"display" : "inline-block"});
 
 		// $(".stop_button").removeClass("stop_button").addClass("play_button");
-		// return false;
+		return false;
 	});
 	$(".play_button").click(function(){
 		swiper.autoplay.start();
@@ -46,7 +46,7 @@ $(function(){		//시작
 		$(".play_button").css({"display" : "none"});
 
 		// $(".play_button").removeClass("play_button").addClass("stop_button");
-		// return false;
+		return false;
 	});
 
 	//스와이퍼 끝
