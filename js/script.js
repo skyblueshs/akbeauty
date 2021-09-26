@@ -1,8 +1,5 @@
 $(function(){		//시작
-	// $("a").click(function(){
-	// 	event.preventDefault();
-	// });
-//탭메뉴 시작
+	//탭메뉴 시작
   $('.tabmenu h2').click(function(){		
 		event.preventDefault();
 		$('.tabmenu h2').removeClass("on");
@@ -10,9 +7,9 @@ $(function(){		//시작
 		$('.tabmenu ul').removeClass("on");
 		$(this).next("ul").addClass("on");
 	});		
-//탭메뉴 끝
+	//탭메뉴 끝
 
-//스와이퍼 시작
+	//스와이퍼 시작
 	var swiper = new Swiper(".mySwiper", {		
 		loop:true,
 		// spaceBetween: 30,

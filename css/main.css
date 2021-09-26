@@ -130,6 +130,7 @@ nav {
   border-bottom:1px solid #949494;
   background-color:#fff;
   z-index: 99;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 nav .gnb {
   text-align:center;
@@ -146,6 +147,9 @@ nav .gnb li a {
   display: block;
   font-size:10px;
   line-height:25px;
+}
+nav .gnb li.concept a {
+  color:crimson;
 }
 nav .whistle {
   display: none;
@@ -899,14 +903,15 @@ footer .f_right a {
     display: block;
     width:120%;
     height:3px;
-    background-color: hotpink;
+    background-color: #f5d5db;
     margin-left:-10%;
     margin-top:-4px;
+    transform: translateY(-5px);
     opacity: 0;
     transition: all 0.7s;
   }
   nav .gnb li:hover::after {
-    opacity: 0.7;
+    opacity: 1;
   }
   nav a.whistle {
     transition: all 0.5s;
