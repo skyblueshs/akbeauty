@@ -256,7 +256,18 @@ footer .f_right a {
     font-size:20px;
     line-height:50px;
   }
-  
+  nav .whistle {
+    display: block;
+    font-size:0;
+    color:transparent;
+    width:62px;
+    height:18px;
+    background:url(../img/menu-whistle.png) no-repeat top / 100%;
+    position:absolute;
+    top:16px;
+    right:20px;
+  }
+
   /* 테블릿 네비게이션 끝 컨셉페이지 시작 */
   #concept {
     padding-top:140px;
