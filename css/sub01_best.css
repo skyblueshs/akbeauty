@@ -105,7 +105,7 @@ nav .gnb li a {
   line-height:25px;
 }
 nav .gnb li.concept{
-  display:none
+  display:none;
 }
 nav .gnb li.concept a {
   color:crimson;
@@ -114,78 +114,119 @@ nav .whistle {
   display: none;
 }
 
+
 /* 네비게이션 영역 끝, 컨텐츠 시작 */
 #container {
-  padding-top:70px;
+  padding-top:72px;
 }
-#container .content {
-  padding:50px 0;
-  position: relative;
+.best {
+  padding:50px 20px 50px;
 }
-#container .content h2 {
-  position: absolute;
-  top:-100px;
-  letter-spacing: -2px;
-  font-weight:normal;
-  text-align: center;
+.best .bs_board li {
+  width:calc((100% - 20px) / 2);
+  margin:0 20px 20px 0;
+  float:left;
+}
+.best .bs_board li:nth-child(2n) {
+  margin-right:0;
+}
+.best .bs_board .bs_img {
+  position:relative;
+  margin-bottom:20px;
+}
+.best .bs_board .bs_img p {
+  width:40px;
+  height:40px;
+  background:url(../img/icon/bs_label.png) no-repeat top / 40px 40px;
+  position:absolute;
+  top:-10px;
+  left:0;
+  color:#fff;
+  font-size:18px;
+  font-weight:bold;
+}
+.best .bs_board .bs_txt {
+  margin-bottom:25px;
+}
+.best .bs_board .bs_txt h4 {
   font-size:20px;
-  line-height: 30px;
-  width:150px;
-  height:30px;
-  background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 150px 15px;
-  transition: all 0.5s;
+  margin-bottom:7px;
 }
-#container .content h2.on {
-  background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 150px 30px ;
+.best .bs_board .bs_txt h4 span {
+  font-size:48px;
+  vertical-align: middle;
+  font-weight:normal;
+  line-height:0.8;
 }
-#container .content h2.ing_event_tit {
-  left:25%;
-  transform: translateX(-50%);
+.best .bs_board .bs_txt .bs_brand {
+  margin-bottom:5px;
 }
-#container .content h2.end_event_tit {
-  left:75%;
-  transform: translateX(-50%);
+.best .bs_board .bs_txt .title {
+  font-size:18px;
+  margin-bottom:5px;
 }
-#container .content ul {
-  margin-top:100px;
-  display: none;
+.best .bs_board .bs_txt .price {
+  font-size:18px;
+  font-weight:bold;
+  color:#000;
 }
-#container .content ul.on {
-  display: block;
+.best .bs_board .bs_txt .price strong {
+  color:#f5121e;
+  margin-right:15px;
 }
-#container .content ul li {
-  margin-bottom:30px;
-}
-
-#container .content .event_txt {
-  padding:20px;
-}
-#container .content .event_txt p.status_on {
-  color:#fff;
-  width:80px;
-  height:30px;
-  line-height: 30px;
-  background-color:#ec8260;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom:19px;
-}
-#container .content .event_txt p.status_off {
-  color:#fff;
-  width:80px;
-  height:30px;
-  line-height: 30px;
-  background-color:#636363;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom:19px;
-}
-#container .content .event_txt h3 {
-  font-size:24px;
-  margin-bottom:15px;
-}
-#container .content .event_txt p.date {
+.best .bs_board .bs_txt .price span {
   font-size:14px;
+  font-weight:normal;
+  color:#666;
+  margin-left:15px;
+  text-decoration:line-through;
+}
+.best .bs_board2 li {
+  width:calc((100% - 20px) / 2);
+  margin-right:20px;
+  float:left;
+}
+.best .bs_board2 li:nth-child(2n) {
+  margin-right:0;
+}
+.best .bs_board2 li {
+  margin-bottom: 20px;
+}
+.best .bs_board2 .bs2_txt {
+  margin:20px 0 0;
+}
+.best .bs_board2 .bs2_txt h4 {
+  font-size:20px;
+  margin-bottom:7px;
+}
+.best .bs_board2 .bs2_txt h4 span {
+  font-size:48px;
+  vertical-align: middle;
+  font-weight:normal;
+  line-height:0.8;
+}
+.best .bs_board2 .bs2_txt .bs_brand {
+  margin-bottom:5px;
+}
+.best .bs_board2 .bs2_txt .title {
+  font-size:18px;
+  margin-bottom:5px;
+}
+.best .bs_board2 .bs2_txt .price {
+  font-size:18px;
+  font-weight:bold;
+  color:#000;
+}
+.best .bs_board2 .bs2_txt .price strong {
+  color:#f5121e;
+  margin-right:15px;
+}
+.best .bs_board2 .bs2_txt .price span {
+  font-size:14px;
+  font-weight:normal;
+  color:#666;
+  margin-left:15px;
+  text-decoration:line-through;
 }
 
 /* 컨텐츠 끝 푸터 시작 */
@@ -316,13 +357,14 @@ footer .f_right a {
   nav .gnb {
     text-align:left;
   }
-  nav .gnb > li {
+  nav .gnb li {
+    display: inline-block;
     margin-right:70px;
   }
-  nav .gnb > li:last-child {
+  nav .gnb li:last-child {
     margin-right:0;
   }
-  nav .gnb > li a {
+  nav .gnb li a {
     height:50px;
     display: block;
     font-size:20px;
@@ -344,34 +386,86 @@ footer .f_right a {
   #container {
     padding-top:140px;
   }
-  #container .content {
-    padding:100px 0;
+  .best {
+    padding:100px 0 40px;
   }
-  #container .content h2 {
-    font-size:36px;
-    line-height: 47px;
-    width:250px;
-    height:50px;
-    background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 250px 25px;
-  }
-  #container .content h2.on {
-    background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
-  }
-  #container .content ul {
-    margin-top:100px;
-  }
-  #container .content ul li {
-    margin-right:16px;
-    margin-bottom:30px;
+  .best .bs_board li {
+    width:calc((100% - 20px) / 2);
+    margin-right:20px;
     float:left;
-    width:calc((100% - 16px) / 2)
   }
-  #container .content ul li:nth-child(2n) {
+  .best .bs_board li:nth-child(2n) {
     margin-right:0;
   }
-  #container .content .event_txt {
-    padding:20px 0;
+  .best .bs_board .bs_img {
+    position:relative;
+    margin-bottom:20px;
+    float:left;
   }
+  .best .bs_board .bs_img p {
+    width:40px;
+    height:40px;
+    background:url(../img/icon/bs_label.png) no-repeat top / 40px 40px;
+    position:absolute;
+    top:-10px;
+    left:0;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+  }
+  .best .bs_board .bs_txt {
+    margin-bottom:45px;
+    padding:0 20px;
+    float:left;
+  }
+  .best .bs_board .bs_txt h4 {
+    font-size:20px;
+    margin-bottom:7px;
+  }
+  .best .bs_board .bs_txt h4 span {
+    font-size:48px;
+    vertical-align: middle;
+    font-weight:normal;
+    line-height:0.8;
+  }
+  .best .bs_board .bs_txt .bs_brand {
+    margin-bottom:5px;
+  }
+  .best .bs_board .bs_txt .title {
+    font-size:18px;
+    margin-bottom:5px;
+  }
+  .best .bs_board .bs_txt .price {
+    font-size:18px;
+    font-weight:bold;
+    color:#000;
+  }
+  .best .bs_board .bs_txt .price strong {
+    color:#f5121e;
+    margin-right:15px;
+  }
+  .best .bs_board .bs_txt .price span {
+    font-size:14px;
+    font-weight:normal;
+    color:#666;
+    margin-left:15px;
+    text-decoration:line-through;
+  }
+  .best .bs_board2 li {
+    width:calc((100% - 60px) / 4);
+    margin-right:20px;
+    float:left;
+  }
+  .best .bs_board2 li:nth-child(2n) {
+    margin-right:20px;
+  }
+  .best .bs_board2 li:nth-child(4n) {
+    margin-right:0;
+  }
+  .best .bs_board2 li {
+    margin-bottom: 20px;
+  }
+  
   
   /* 테블릿 컨텐츠 끝 푸터 시작 */
   footer .f_sns {
@@ -406,7 +500,7 @@ footer .f_right a {
   }
 
   /* 데스크탑 헤드 끝 네비게이션 시작 */
-  nav .gnb > li::after {
+  nav .gnb li::after {
     content:'';
     display: block;
     width:120%;
@@ -418,33 +512,38 @@ footer .f_right a {
     opacity: 0;
     transition: all 0.7s;
   }
-  nav .gnb > li:hover::after {
+  nav .gnb li:hover::after {
     opacity: 1;
   }
   nav .gnb li.concept{
     display:inline-block;
   }
-  
   nav a.whistle {
     transition: all 0.5s;
   }
   nav a.whistle:hover {
     background-color: #ddd;
   }
-
-  /* 데스크탑 헤더 끝 컨텐츠 시작 */
-  #container .content h2 {
-    transition: all 0.5s;
+  /* 데스크탑 네비게이션 끝 컨텐츠 시작 */
+  .best .bs_board .bs_img {
+    width:300px;
+    float:left;
   }
-  #container .content h2:hover {
-    background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
+  .best .bs_board .bs_txt {
+    margin-bottom:0;
+    float:left;
+    padding:0 20px;
+    width:calc(100% - 300px);
+    letter-spacing: -0.6;
   }
-  #container .content ul li {
-    margin-right:50px;
-    width:calc((100% - 50px) / 2)
+  .best .bs_board li:nth-child(3) .bs_img, .best .bs_board  li:nth-child(4) .bs_img {
+    margin-bottom:0;
   }
-  #container .content ul li:hover h3 {
-    text-decoration: underline;
+  .best .bs_board li:hover .bs_txt p.bs_brand, .best .bs_board li:hover .bs_txt p.title, .best .br_board li:hover .br_txt p.review {
+    text-decoration:underline;
+  }
+  .best .bs_board li, .best .bs_board2 li {
+    margin-bottom:90px;
   }
 
 

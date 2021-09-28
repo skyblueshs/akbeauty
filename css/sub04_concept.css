@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 #wrap {
   min-width: 320px;
 }
@@ -86,7 +85,7 @@ nav {
   border-bottom:1px solid #949494;
   background-color:#fff;
   z-index: 99;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 nav .gnb {
   text-align:center;
@@ -105,7 +104,7 @@ nav .gnb li a {
   line-height:25px;
 }
 nav .gnb li.concept{
-  display:none
+  display:none;
 }
 nav .gnb li.concept a {
   color:crimson;
@@ -113,82 +112,13 @@ nav .gnb li.concept a {
 nav .whistle {
   display: none;
 }
-
-/* 네비게이션 영역 끝, 컨텐츠 시작 */
-#container {
+/* 네비게이션 영역 끝, 컨셉페이지 시작 */
+#concept {
   padding-top:70px;
 }
-#container .content {
-  padding:50px 0;
-  position: relative;
-}
-#container .content h2 {
-  position: absolute;
-  top:-100px;
-  letter-spacing: -2px;
-  font-weight:normal;
-  text-align: center;
-  font-size:20px;
-  line-height: 30px;
-  width:150px;
-  height:30px;
-  background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 150px 15px;
-  transition: all 0.5s;
-}
-#container .content h2.on {
-  background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 150px 30px ;
-}
-#container .content h2.ing_event_tit {
-  left:25%;
-  transform: translateX(-50%);
-}
-#container .content h2.end_event_tit {
-  left:75%;
-  transform: translateX(-50%);
-}
-#container .content ul {
-  margin-top:100px;
-  display: none;
-}
-#container .content ul.on {
-  display: block;
-}
-#container .content ul li {
-  margin-bottom:30px;
-}
 
-#container .content .event_txt {
-  padding:20px;
-}
-#container .content .event_txt p.status_on {
-  color:#fff;
-  width:80px;
-  height:30px;
-  line-height: 30px;
-  background-color:#ec8260;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom:19px;
-}
-#container .content .event_txt p.status_off {
-  color:#fff;
-  width:80px;
-  height:30px;
-  line-height: 30px;
-  background-color:#636363;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom:19px;
-}
-#container .content .event_txt h3 {
-  font-size:24px;
-  margin-bottom:15px;
-}
-#container .content .event_txt p.date {
-  font-size:14px;
-}
 
-/* 컨텐츠 끝 푸터 시작 */
+/* 컨셉페이지 끝 푸터 시작 */
 footer {
   background-color: #333;
   padding:50px 0;
@@ -239,6 +169,7 @@ footer .f_link a {
 footer .f_sns {
   display: none;
 }
+
 footer .f_right {
   font-size:12px;
   line-height:2.3;
@@ -248,10 +179,7 @@ footer .f_right a {
 }
 
 
-
-
-
-/* 테블릿 시작 */
+/* 테블릿 */
 @media all and (min-width:860px) {
   header {
     height:90px;
@@ -308,7 +236,6 @@ footer .f_right a {
     width:40px;
     height:40px;
   }
-
   /* 테블릿 헤더 끝, 네비게이션 시작 */
   nav {
     top:90px;
@@ -316,64 +243,28 @@ footer .f_right a {
   nav .gnb {
     text-align:left;
   }
-  nav .gnb > li {
+  nav .gnb li {
+    display: inline-block;
     margin-right:70px;
   }
-  nav .gnb > li:last-child {
+  nav .gnb li:last-child {
     margin-right:0;
   }
-  nav .gnb > li a {
+  nav .gnb li a {
     height:50px;
     display: block;
     font-size:20px;
     line-height:50px;
   }
-  nav .whistle {
-    display: block;
-    font-size:0;
-    color:transparent;
-    width:62px;
-    height:18px;
-    background:url(../img/menu-whistle.png) no-repeat top / 100%;
-    position:absolute;
-    top:16px;
-    right:20px;
-  }
-
-  /* 테블릿 네비게이션 끝, 컨텐츠 시작 */
-  #container {
+  
+  /* 테블릿 네비게이션 끝 컨셉페이지 시작 */
+  #concept {
     padding-top:140px;
   }
-  #container .content {
-    padding:100px 0;
-  }
-  #container .content h2 {
-    font-size:36px;
-    line-height: 47px;
-    width:250px;
-    height:50px;
-    background:url(../img/sub/event_tit_off.jpg) no-repeat bottom / 250px 25px;
-  }
-  #container .content h2.on {
-    background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
-  }
-  #container .content ul {
-    margin-top:100px;
-  }
-  #container .content ul li {
-    margin-right:16px;
-    margin-bottom:30px;
-    float:left;
-    width:calc((100% - 16px) / 2)
-  }
-  #container .content ul li:nth-child(2n) {
-    margin-right:0;
-  }
-  #container .content .event_txt {
-    padding:20px 0;
-  }
   
-  /* 테블릿 컨텐츠 끝 푸터 시작 */
+
+
+  /* 테블릿 컨셉페이지 끝 푸터 시작 */
   footer .f_sns {
     display: block;
     margin-bottom:80px;
@@ -386,8 +277,6 @@ footer .f_right a {
     margin-right:0;
   }
 }
-
-
 
 /* 데스크탑 */
 @media all and (min-width:1200px) {
@@ -404,9 +293,8 @@ footer .f_right a {
   header .utill li:hover a{
     background-color:#ddd;
   }
-
   /* 데스크탑 헤드 끝 네비게이션 시작 */
-  nav .gnb > li::after {
+  nav .gnb li::after {
     content:'';
     display: block;
     width:120%;
@@ -418,37 +306,35 @@ footer .f_right a {
     opacity: 0;
     transition: all 0.7s;
   }
-  nav .gnb > li:hover::after {
+  nav .gnb li:hover::after {
     opacity: 1;
   }
   nav .gnb li.concept{
     display:inline-block;
   }
-  
   nav a.whistle {
     transition: all 0.5s;
   }
   nav a.whistle:hover {
     background-color: #ddd;
   }
-
-  /* 데스크탑 헤더 끝 컨텐츠 시작 */
-  #container .content h2 {
-    transition: all 0.5s;
-  }
-  #container .content h2:hover {
-    background:url(../img/sub/event_tit_on.jpg) no-repeat bottom / 250px 50px ;
-  }
-  #container .content ul li {
-    margin-right:50px;
-    width:calc((100% - 50px) / 2)
-  }
-  #container .content ul li:hover h3 {
-    text-decoration: underline;
+  nav .whistle {
+    display: block;
+    font-size:0;
+    color:transparent;
+    width:62px;
+    height:18px;
+    background:url(../img/menu-whistle.png) no-repeat top / 100%;
+    position:absolute;
+    top:16px;
+    right:20px;
   }
 
+  /* 데스크탑 네비게이션 끝 컨셉페이지 시작 */
 
-  /* 데스크탑 컨텐츠 끝 푸터 시작 */
+
+
+  /* 데스크탑 컨셉페이지 끝 푸터 시작 */
   footer {
     text-align: left;;
   }
@@ -475,11 +361,7 @@ footer .f_right a {
   footer .f_right {
     float:right;
   }
-  footer .f_right a {
-    color:#fff;
-  }
   footer .f_right a:hover {
     text-decoration: underline;
   }
-
 }

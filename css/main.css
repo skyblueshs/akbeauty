@@ -130,7 +130,7 @@ nav {
   border-bottom:1px solid #949494;
   background-color:#fff;
   z-index: 99;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 nav .gnb {
   text-align:center;
@@ -148,6 +148,10 @@ nav .gnb li a {
   font-size:10px;
   line-height:25px;
 }
+nav .gnb li.concept{
+  display:none
+}
+
 nav .gnb li.concept a {
   color:crimson;
 }
@@ -205,7 +209,8 @@ nav .whistle {
   color:#fff;
   text-align:center;
   line-height:20px;
-  font-size:10px
+  font-size:10px;
+  transform: translateY(10px);
 }
 #slide .s_button p strong {
   font-size:12px;
@@ -553,6 +558,7 @@ footer .f_right a {
     top:16px;
     right:20px;
   }
+
     /* 테블릿 네비게이션 끝, 슬라이드 시작 */
   /* #slide > a {
     height:650px
@@ -570,6 +576,7 @@ footer .f_right a {
   }
   #slide .s_button p {
     font-size:16px;
+    transform: translateY(0);
   }
   #slide .s_button p strong {
     line-height:40px;
@@ -913,6 +920,10 @@ footer .f_right a {
   nav .gnb li:hover::after {
     opacity: 1;
   }
+  nav .gnb li.concept{
+    display:inline-block;
+  }
+  
   nav a.whistle {
     transition: all 0.5s;
   }
