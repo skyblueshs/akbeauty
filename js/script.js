@@ -71,7 +71,25 @@ $(function(){		//시작
 	});
 	//모달레이어 팝업 끝
 
+	
 
+
+	var windowWidth = $(window).width();
+	if(windowWidth < 1200) {
+		$("nav .gnb > li.nav_brand").click(function(){
+			event.preventDefault();
+			$(".mm_overay, .mm_cont").fadeIn()
+		});
+		$(".mm_overay, .mm_close").click(function(){
+			$(".mm_overay, .mm_cont").fadeOut()
+		})
+	} else {
+		$("nav .gnb > li").hover(function(){
+			$(this).find(".submenu1").stop().slideDown();
+		},function(){
+			$(this).find(".submenu1").stop().slideUp();
+		});
+	}
 
 
 });		//끝

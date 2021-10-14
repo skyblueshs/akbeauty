@@ -11,6 +11,25 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script>
     $(function(){   //실행틀 시작
+      // 네비 섭메뉴 슬라이드 시작
+      var windowWidth = $(window).width();
+      if(windowWidth < 1200) {
+        $("nav .gnb > li.nav_brand").click(function(){
+          event.preventDefault();
+          $(".mm_overay, .mm_cont").fadeIn()
+        });
+        $(".mm_overay, .mm_close").click(function(){
+          $(".mm_overay, .mm_cont").fadeOut()
+        })
+      } else {
+        $("nav .gnb > li").hover(function(){
+          $(this).find(".submenu1").stop().slideDown();
+        },function(){
+          $(this).find(".submenu1").stop().slideUp();
+        });
+      }
+      // 네비 섭메뉴 슬라이드 끝
+
       // 서브 탭메뉴 시작
       $(".content h2").click(function(){
         event.preventDefault()
@@ -18,9 +37,9 @@
         $(this).addClass("on");
         $(".content ul").removeClass("on");
         $(this).next("ul").addClass("on")
-      });
+      });  
     	//서브 탭메뉴 끝
-
+      
 
     });     //실행틀 끝
   </script>
@@ -46,16 +65,74 @@
     <nav>
       <div class="inner">
         <ul class="gnb clear">
-          <li><a href="#">브랜드</a></li>
+          <li class="nav_brand">
+            <a href="#">브랜드</a>
+            <ul class="submenu1">
+              <li class="age">
+                <a href="#">Age20's</a>
+              </li>
+              <li class="asolution">
+                <a href="#">Asolution</a>
+              </li>
+              <li class="bongyul">
+                <a href="#">BonGyul</a>
+              </li>
+              <li class="fflow">
+                <a href="#">FFLOW</a>
+              </li>
+              <li class="luna">
+                <a href="#">LUNA</a>
+              </li>
+              <li class="point_and">
+                <a href="#">POINT&</a>
+              </li>
+              <li class="point">
+                <a href="#">POINT</a>
+              </li>
+            </ul>
+            <!--    //.submenu1 -->
+          </li>
           <li><a href="#">카테고리</a></li>
           <li><a href="sub01_best.html">BEST</a></li>
           <li><a href="sub03_event.html">EVENT</a></li>
           <li><a href="#">REVIEW</a></li>
-          <li class="concept"><a href="sub04_concept.html">컨셉페이지</a></li>
+          <li class="concept"><a href="sub04_concept.html" target="_blank">컨셉페이지</a></li>
         </ul>
         <a href="#" class="whistle">WHISTLE 바로가기</a>
       </div>    <!-- //.inner -->
     </nav>
+    <div class="mobile_modal">
+      <div class="mm_overay"></div>
+      <div class="mm_cont">
+        <ul class="clear">
+          <li class="age">
+            <a href="#">Age20's</a>
+          </li>
+          <li class="asolution">
+            <a href="#">Asolution</a>
+          </li>
+          <li class="bongyul">
+            <a href="#">BonGyul</a>
+          </li>
+          <li class="fflow">
+            <a href="#">FFLOW</a>
+          </li>
+          <li class="luna">
+            <a href="#">LUNA</a>
+          </li>
+          <li class="point_and">
+            <a href="#">POINT&</a>
+          </li>
+          <li class="point">
+            <a href="#">POINT</a>
+          </li>
+        </ul>
+        <div class="mm_close">x</div>
+      </div>
+      <!-- //.mm_cont -->
+    </div>
+    <!-- //.mobile_modal -->
+
     <!-- 네비 끝 타이틀 배너 시작 -->
     <div id="container">
       <div class="tit_banner">

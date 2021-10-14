@@ -86,7 +86,7 @@ nav {
   border-bottom:1px solid #949494;
   background-color:#fff;
   z-index: 99;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 nav .gnb {
   text-align:center;
@@ -105,15 +105,162 @@ nav .gnb li a {
   line-height:25px;
 }
 nav .gnb li.concept{
-  display:none;
+  display:none
 }
+nav .gnb .submenu1 {
+  display: none;
+  position:absolute;
+  top:50px;
+  left:-15px;
+  background-color:#fff;
+  padding:20px 50px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+nav .gnb .submenu1 li {
+  padding:10px;
+  margin:10px 25px;
+  border:1px solid #ddd;
+  transition: all 0.5s;
+}
+nav .gnb .submenu1 li:hover {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+nav .gnb .submenu1 li a {
+  width:160px;
+  height:60px;
+  font-size:0;
+  color:transparent;
+  display: block;
+}
+nav .gnb .submenu1 li.age a {
+  background: url(../img/nav_brand/age.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.age:hover a {
+  background: url(../img/nav_brand/age_on.png) no-repeat center;
+}
+nav .gnb .submenu1 li.asolution a {
+  background: url(../img/nav_brand/asolution.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.asolution:hover a {
+  background: url(../img/nav_brand/asolution_on.png) no-repeat center;
+}
+nav .gnb .submenu1 li.bongyul a {
+  background: url(../img/nav_brand/bongyul.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.bongyul:hover a {
+  background: url(../img/nav_brand/bongyul_on.png) no-repeat center;
+}
+nav .gnb .submenu1 li.fflow a {
+  background: url(../img/nav_brand/fflow.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.fflow:hover a {
+  background: url(../img/nav_brand/fflow_on.png) no-repeat center;
+}
+nav .gnb .submenu1 li.luna a {
+  background: url(../img/nav_brand/luna.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.luna:hover a {
+  background: url(../img/nav_brand/luna_on.png) no-repeat center;
+}
+nav .gnb .submenu1 li.point_and a {
+  background: url(../img/nav_brand/point&.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.point_and:hover a {
+  background: url(../img/nav_brand/point&_on.png) no-repeat center;
+}
+nav .gnb .submenu1 li.point a {
+  background: url(../img/nav_brand/point.png) no-repeat center;
+  transition:all 0.5s;
+}
+nav .gnb .submenu1 li.point:hover a {
+  background: url(../img/nav_brand/point_on.png) no-repeat center;
+}
+
 nav .gnb li.concept a {
   color:crimson;
 }
 nav .whistle {
   display: none;
 }
-
+/* 네비게이션 끝 모바일 섭메뉴 모달 시작*/
+.mm_overay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  z-index:9998;
+}
+.mm_cont {
+  width:100%;
+  max-width: 500px;
+  height:calc(100vh / 16 * 9);
+  max-height:450px;
+  padding:50px 15px;
+  background-color: #fff;
+  position: fixed;
+  left:0;
+  top:0;
+  display: none;
+  z-index:9999;
+}
+.mm_cont .mm_close {
+  display: block;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  font-size:30px;
+  width:50px;
+  height:50px;
+  color:#333;
+  text-align:center;
+  line-height:50px;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mm_cont li {
+  margin:10px 20px;
+  transition: all 0.5s;
+  float:left;
+}
+.mm_cont li a {
+  border:1px solid #ddd;
+  width:160px;
+  height:60px;
+  font-size:0;
+  color:transparent;
+  display: block;
+}
+.mm_cont li.age a {
+  background: url(../img/nav_brand/age.png) no-repeat center;
+}
+.mm_cont li.asolution a {
+  background: url(../img/nav_brand/asolution.png) no-repeat center;
+}
+.mm_cont li.bongyul a {
+  background: url(../img/nav_brand/bongyul.png) no-repeat center;
+}
+.mm_cont li.fflow a {
+  background: url(../img/nav_brand/fflow.png) no-repeat center;
+}
+.mm_cont li.luna a {
+  background: url(../img/nav_brand/luna.png) no-repeat center;
+}
+.mm_cont li.point_and a {
+  background: url(../img/nav_brand/point&.png) no-repeat center;
+}
+.mm_cont li.point a {
+  background: url(../img/nav_brand/point.png) no-repeat center;
+}
 
 /* 네비게이션 영역 끝, 컨텐츠 시작 */
 #container {
@@ -500,7 +647,7 @@ footer .f_right a {
   }
 
   /* 데스크탑 헤드 끝 네비게이션 시작 */
-  nav .gnb li::after {
+  nav .gnb > li > a::after {
     content:'';
     display: block;
     width:120%;
@@ -512,11 +659,85 @@ footer .f_right a {
     opacity: 0;
     transition: all 0.7s;
   }
-  nav .gnb li:hover::after {
+  nav .gnb > li:hover > a::after {
     opacity: 1;
   }
-  nav .gnb li.concept{
+  nav .gnb > li.concept{
     display:inline-block;
+  }
+  nav .gnb .submenu1 {
+    display: none;
+    position:absolute;
+    top:50px;
+    left:-15px;
+    background-color:#fff;
+    padding:20px 50px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  }
+  nav .gnb .submenu1 li {
+    padding:10px;
+    margin:10px 25px;
+    border:1px solid #ddd;
+    transition: all 0.5s;
+  }
+  nav .gnb .submenu1 li:hover {
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  }
+  nav .gnb .submenu1 li a {
+    width:160px;
+    height:60px;
+    font-size:0;
+    color:transparent;
+    display: block;
+  }
+  nav .gnb .submenu1 li.age a {
+    background: url(../img/nav_brand/age.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.age:hover a {
+    background: url(../img/nav_brand/age_on.png) no-repeat center;
+  }
+  nav .gnb .submenu1 li.asolution a {
+    background: url(../img/nav_brand/asolution.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.asolution:hover a {
+    background: url(../img/nav_brand/asolution_on.png) no-repeat center;
+  }
+  nav .gnb .submenu1 li.bongyul a {
+    background: url(../img/nav_brand/bongyul.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.bongyul:hover a {
+    background: url(../img/nav_brand/bongyul_on.png) no-repeat center;
+  }
+  nav .gnb .submenu1 li.fflow a {
+    background: url(../img/nav_brand/fflow.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.fflow:hover a {
+    background: url(../img/nav_brand/fflow_on.png) no-repeat center;
+  }
+  nav .gnb .submenu1 li.luna a {
+    background: url(../img/nav_brand/luna.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.luna:hover a {
+    background: url(../img/nav_brand/luna_on.png) no-repeat center;
+  }
+  nav .gnb .submenu1 li.point_and a {
+    background: url(../img/nav_brand/point&.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.point_and:hover a {
+    background: url(../img/nav_brand/point&_on.png) no-repeat center;
+  }
+  nav .gnb .submenu1 li.point a {
+    background: url(../img/nav_brand/point.png) no-repeat center;
+    transition:all 0.5s;
+  }
+  nav .gnb .submenu1 li.point:hover a {
+    background: url(../img/nav_brand/point_on.png) no-repeat center;
   }
   nav a.whistle {
     transition: all 0.5s;
@@ -524,6 +745,7 @@ footer .f_right a {
   nav a.whistle:hover {
     background-color: #ddd;
   }
+
   /* 데스크탑 네비게이션 끝 컨텐츠 시작 */
   .best .bs_board .bs_img {
     width:300px;
