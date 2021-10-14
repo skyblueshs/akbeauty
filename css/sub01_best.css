@@ -761,11 +761,14 @@ footer .f_right a {
   .best .bs_board li:nth-child(3) .bs_img, .best .bs_board  li:nth-child(4) .bs_img {
     margin-bottom:0;
   }
-  .best .bs_board li:hover .bs_txt p.bs_brand, .best .bs_board li:hover .bs_txt p.title, .best .br_board li:hover .br_txt p.review {
+  .best .bs_board li:hover .bs_txt p.bs_brand, .best .bs_board li:hover .bs_txt p.title {
     text-decoration:underline;
   }
   .best .bs_board li, .best .bs_board2 li {
     margin-bottom:90px;
+  }
+  .best .bs_board2 li:hover .bs2_txt p.title {
+    text-decoration:underline;
   }
 
 
